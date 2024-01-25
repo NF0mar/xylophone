@@ -14,108 +14,43 @@ class XylophoneApp extends StatelessWidget {
     );
   }
 
+  void piano() {
+    Expanded(
+      child: TextButton(
+        style: TextButton.styleFrom(
+          shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.zero),
+          ),
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          backgroundColor: Colors.white,
+        ),
+        onPressed: () {
+          playsound(1);
+        },
+        child: Container(),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
         backgroundColor: Colors.red,
         body: SafeArea(
-            child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.zero),
-                ),
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                backgroundColor: Colors.white,
-              ),
-              onPressed: () {
-                playsound(1);
-              },
-              child: Container(),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.zero),
-                ),
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                backgroundColor: Colors.black,
-              ),
-              onPressed: () {
-                playsound(2);
-              },
-              child: const Text(''),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.zero),
-                ),
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                backgroundColor: Colors.white,
-              ),
-              onPressed: () {
-                playsound(3);
-              },
-              child: const Text(''),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.zero),
-                ),
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                backgroundColor: Colors.black,
-              ),
-              onPressed: () {
-                playsound(4);
-              },
-              child: const Text(''),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.zero),
-                ),
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                backgroundColor: Colors.white,
-              ),
-              onPressed: () {
-                playsound(5);
-              },
-              child: const Text(''),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.zero),
-                ),
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                backgroundColor: Colors.black,
-              ),
-              onPressed: () {
-                playsound(6);
-              },
-              child: const Text(''),
-            ),
-            TextButton(
-              style: TextButton.styleFrom(
-                shape: const RoundedRectangleBorder(
-                  borderRadius: BorderRadius.all(Radius.zero),
-                ),
-                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-                backgroundColor: Colors.white,
-              ),
-              onPressed: () {
-                playsound(7);
-              },
-              child: const Text(''),
-            ),
-          ],
-        )),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              piano(),
+              piano(),
+              piano(),
+              piano(),
+              piano(),
+              piano(),
+              piano()
+            ],
+          ),
+        ),
       ),
       debugShowCheckedModeBanner: false,
     );
