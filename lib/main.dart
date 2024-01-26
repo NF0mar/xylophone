@@ -41,8 +41,8 @@ class XylophoneApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              piano(),
-              piano(),
+              piano(1),
+              piano(2),
               piano(),
               piano(),
               piano(),
