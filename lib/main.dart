@@ -14,18 +14,18 @@ class XylophoneApp extends StatelessWidget {
     );
   }
 
-  void piano() {
-    Expanded(
-      child: TextButton(
+  Expanded piano({required Color color, required int soundnumber}) {
+    return Expanded(
+      child: ElevatedButton(
         style: TextButton.styleFrom(
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.zero),
           ),
+          backgroundColor: color,
           tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-          backgroundColor: Colors.white,
         ),
         onPressed: () {
-          playsound(1);
+          playsound(soundnumber);
         },
         child: Container(),
       ),
@@ -41,13 +41,13 @@ class XylophoneApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              piano(1),
-              piano(2),
-              piano(),
-              piano(),
-              piano(),
-              piano(),
-              piano()
+              piano(color: Colors.black, soundnumber: 1),
+              piano(color: Colors.white, soundnumber: 2),
+              piano(color: Colors.black, soundnumber: 3),
+              piano(color: Colors.white, soundnumber: 4),
+              piano(color: Colors.black, soundnumber: 5),
+              piano(color: Colors.white, soundnumber: 6),
+              piano(color: Colors.black, soundnumber: 7),
             ],
           ),
         ),
